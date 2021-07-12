@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+body {
+  background: #f3f1ff;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+/* -----------------
+   header start 
+--------------------*/
+header {
+  background: #562eff;
+  padding: 35px 0;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-size: 24px;
+  color: white;
+}
+.nav-logo img {
+  width: 40px;
+  height: 50px;
+  margin-right: 15px;
+}
+.nav-links,
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+.nav-links a {
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+  margin-left: 35px;
+}
+/* -----------------
+   header end 
+--------------------*/
+
+/* -----------------
+   main start 
+--------------------*/
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
+.common-title {
+  font-size: 24px;
+  color: #562eff;
+  margin-top: 3px;
+}
+.gray-color {
+  color: #9f9f9f;
+}
+.container {
+  width: 870px;
+  margin: 0 auto;
+}
+
+/* -----------------
+   top player start 
+--------------------*/
+.top-player {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px 10px 0 0;
+  padding-bottom: 0;
+}
+.players {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+}
+.single-player {
+  display: flex;
+  margin-top: 30px;
+}
+.player-img {
+  margin-right: 16px;
+}
+.player-img img {
+  width: 56px;
+  height: 56px;
+}
+.player-name h3 {
+  font-size: 18px;
+}
+hr {
+  margin-top: 40px;
+  margin-bottom: 0;
+  border: 1px solid #d1d1d1;
+}
+
+/* -----------------
+   top player end 
+--------------------*/
+
+/* -----------------
+   top blog start 
+--------------------*/
+
+.top-blog {
+  padding: 28px;
+  background-color: white;
+  border-radius: 0 0 10px 10px;
+}
+.blogs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+}
+.single-blog {
+  display: flex;
+  margin-top: 26px;
+}
+.blog-img {
+  margin-right: 16px;
+}
+.blog-img img {
+  width: 177px;
+  height: 117px;
+}
+.blog-info {
+}
+.blog-info h2 {
+  font-size: 20px;
+}
+.blog-info p {
+  font-size: 16px;
+  color: #562eff;
+}
+
+/* -----------------
+   top blog end 
+--------------------*/
+
+/* -----------------
+   latest courses start 
+--------------------*/
+
+.latest-courses {
+  padding: 30px;
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+.courses {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 15px;
+}
+.single-course {
+  padding: 13px 11px 10px 11px;
+  border-radius: 10px;
+  box-shadow: 0 5px 8px -4px rgba(128, 128, 128, 0.363);
+}
+.course-img {
+}
+.course-img img {
+  width: 224px;
+  height: 104px;
+}
+.course-info {
+  font-size: 14px;
+}
+.course-info h2 {
+  font-size: 20px;
+}
+.course-info p {
+  color: #ed6b4f;
+}
+
+.course-rating-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.yellow {
+  color: #ffc014;
+}
+.gray {
+  color: #aeaeae;
+}
+.rating {
+}
+.rating span {
+  color: #a2a2a2;
+  margin-left: 10px;
+}
+.time {
+  color: #ff4a60;
+  background-color: #ffe4e8;
+  border-radius: 15px;
+  padding: 5px 10px;
+}
+/* -----------------
+   latest courses end 
+--------------------*/
+
+/* -----------------
+   media query start
+--------------------*/
+@media only screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+  nav {
+    flex-direction: column;
+  }
+  .nav-logo img {
+    margin-left: 15px;
+  }
+  .nav-links a {
+    margin-left: 15px;
+  }
+  .players {
+    /* display: grid; */
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+  }
+  .single-player {
+    display: block;
+    margin-top: 30px;
+  }
+
+  .blogs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .single-blog {
+    flex-direction: column;
+  }
+  .blog-info h2 {
+    margin-top: 0;
+  }
+
+  .courses {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 769px) {
+  .container {
+    width: 100%;
+  }
+  .players {
+    /* display: grid; */
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .blogs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .courses {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media only screen and (min-width: 770px) and (max-width: 1025px) {
+  .container {
+    width: 100%;
+  }
+  .courses {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* -----------------
+   media query end
+--------------------*/
